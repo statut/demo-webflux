@@ -30,7 +30,8 @@ public class DemoApplication {
                 POST("/vehicle"), vehicleHandler::createVehicle).andRoute(
                 GET("/vehicle"), vehicleHandler::listVehicles).andRoute(
                 GET("/vehicle/{vin}"), vehicleHandler::findVehicle).andRoute(
-                GET("/vehicle/model/{model}"), vehicleHandler::getVehicleByModel);
+            GET("/vehicle/model/{model}"), vehicleHandler::getVehicleByModel).andRoute(
+            POST("/vehicle/dummy"), vehicleHandler::createDummyData);
     }
 
 }
