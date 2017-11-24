@@ -25,7 +25,7 @@ public class DemoApplication {
     }
 
     @Bean
-    public RouterFunction<ServerResponse> personRouterFunction(VehicleHandler vehicleHandler) {
+    public RouterFunction<ServerResponse> vehicleRouterFunction(VehicleHandler vehicleHandler) {
         return route(
                 POST("/vehicle"), vehicleHandler::createVehicle).andRoute(
                 GET("/vehicle"), vehicleHandler::listVehicles).andRoute(
